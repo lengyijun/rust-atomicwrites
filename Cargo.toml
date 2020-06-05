@@ -15,10 +15,10 @@ repository = "https://github.com/untitaker/rust-atomicwrites"
 exclude = ["/.travis.yml", "/Makefile", "/appveyor.yml"]
 
 [dependencies]
-tempfile = "3.1"
+tempfile = {git="https://github.com/lengyijun/tempfile"}
 
 [target.'cfg(unix)'.dependencies]
-nix = "0.14.0"
+nix = {path="nix"}
 
-[target.'cfg(windows)'.dependencies]
-winapi = { version = "0.3", features = ["winbase"] }
+[target.'cfg(not(target_env = "sgx"))'.dependencies]
+sgx_tstd = { version = "1.0", rev = "v1.1.2", git = "https://github.com/apache/teaclave-sgx-sdk.git", features=["untrusted_fs"] }
