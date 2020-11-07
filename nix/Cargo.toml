@@ -52,5 +52,5 @@ name = "test-ptymaster-drop"
 path = "test/test_ptymaster_drop.rs"
 
 [target.'cfg(not(target_env = "sgx"))'.dependencies]
-sgx_tstd = { version = "1.0", rev = "v1.1.2", git = "https://github.com/apache/teaclave-sgx-sdk.git", features=["untrusted_fs"] }
-sgx_libc = { version = "1.0", rev = "v1.1.2", git = "https://github.com/apache/teaclave-sgx-sdk.git" }
+sgx_tstd = { version = "1.0", rev = "v1.1.3", git = "https://github.com/apache/teaclave-sgx-sdk.git", features=["untrusted_fs"] }
+sgx_libc = { version = "1.0", rev = "v1.1.3", git = "https://github.com/apache/teaclave-sgx-sdk.git" }
